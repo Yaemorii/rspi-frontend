@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://127.0.0.1:8000/# -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SIMPEL-Insani</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index_files/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Gambar background bagian atas */
+        .hero {
+            background-image: url('/img/rspi.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            position: relative;
+        }
+
+        .logo-highlight {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-highlight img {
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .hero img.logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+        }
+
+        .content {
+            background-color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            margin-top: -20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .content h2 {
+            margin-bottom: 5px;
+            font-size: 32px;
+            color: #3ec1d3;
+        }
+
+        .content h3 {
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .button {
+            display: block;
+            margin: 15px auto;
+            padding: 14px 24px;
+            width: 400px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            cursor: pointer;
+            color: #333;
+            border-left: 5px solid #3ec1d3;
+            text-align: left;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            background-color: #e6fafd;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .button i {
+            margin-right: 10px;
+            color: #3ec1d3;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #0d4d59;
+            color: white;
+            padding: 30px 20px;
+            font-size: 17px;
+            text-align: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: #3ec1d3;
+        }
+
+        .help-links a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .help-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media(max-width: 600px) {
+            .button {
+                width: 90%;
+            }
+
+            .hero img.logo {
+                height: 50px;
+            }
+        }
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: #3ec1d3;
+            /* warna dari gambar */
+            color: white;
+            padding: 8px 0;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            z-index: 999;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .hero {
+        height: 250px;
+    }
+
+    .logo-highlight img {
+        height: 30px;
+    }
+
+            /* Judul lebih kecil */
+            .content h2 {
+                font-size: 22px;
+            }
+
+            .content h3 {
+                font-size: 16px;
+            }
+
+            /* Tombol full lebar di HP */
+            .button {
+                width: 90%;
+                font-size: 15px;
+                padding: 12px 16px;
+                text-align: center;
+            }
+
+            .button i {
+                margin-right: 8px;
+            }
+
+            /* Footer rapi dan center */
+            footer {
+                padding: 20px 15px;
+                font-size: 13px;
+            }
+
+            .help-links {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .help-links a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content h3 {
+                font-size: 14px;
+            }
+
+            .button {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <link rel="icon" href="./index_files/logo-rspi.png" sizes="32x32">
+    <link rel="icon" href="./index_files/logo-rspi.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="./index_files/logo-rspi.png">
+</head>
+
+<body>
+    <!-- Gambar background bagian atas -->
+    <div class="hero">
+        <div class="logo-highlight fade-in show">
+            <img src="./index_files/logo-rspi.png" alt="Logo RSPI">
+        </div>
+    </div>
+    <!-- Marquee berjalan -->
+    <div class="marquee-container">
+        <div class="marquee-text">
+            Selamat Datang di Website Rumah Sakit Pelita Insani Martapura | Rumah Sakit yang memberikan pelayanan
+            kesehatan berkualitas, profesional, dan ramah kepada pasien serta keluarga dengan rasionalitas dalam
+            pembiayaan.
+        </div>
+    </div>
+
+    <!-- Bagian putih -->
+    <div class="content fade-in show">
+        <h2>SIMPEL-Insani</h2>
+        <h3>Sistem Pendaftaran Pasien Online RS Pelita Insani</h3>
+
+        <p>Silakan pilih jenis kunjungan Anda:</p>
+
+        <button class="button"><i class="fas fa-user-plus"></i> Pendaftaran Pasien Baru</button>
+        <button class="button"><i class="fas fa-user-check"></i> Check-in Pasien Lama</button>
+        <button class="button"><i class="fas fa-id-card"></i> Check-in Pasien BPJS</button>
+        <button class="button"><i class="fas fa-stethoscope"></i> Pasien Kontrol (Rujukan Internal)</button>
+
+
+
+    </div>
+    <footer>
+        <div class="help-links">
+            Butuh Bantuan? <a href="http://127.0.0.1:8000/#">Pusat Bantuan</a> | <a href="http://127.0.0.1:8000/#">Hubungi Petugas</a>
+        </div>
+        <p>Alamat: Jl. Sekumpul No. 66 Martapura, Kab. Banjar, Kalimantan Selatan 70614<br>
+            Email: rs.pelitainsani@gmail.com<br>
+            Telp: (0511) 4722222 (IGD)</p>
+        <p><i>Powered by Tim IT RSPI</i></p>
+    </footer>
+    <script>
+        // Saat halaman dimuat, jalankan animasi
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((el, i) => {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, i * 200); // jeda animasi bertahap
+            });
+        });
+    </script>
+
+
+
+</body></html>
