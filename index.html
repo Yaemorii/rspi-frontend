@@ -239,6 +239,35 @@
             }
         }
     </style>
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener("keydown", function(e) {
+            if (
+                e.key === "F12" ||
+                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+                (e.ctrlKey && e.key === "U")
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        (function() {
+            let threshold = 160;
+            let checkDevTools = function() {
+                let start = new Date();
+                debugger;
+                let end = new Date();
+                if (end - start > threshold) {
+                    alert("Developer Tools terdeteksi! Akses diblokir.");
+                    window.location.href = "https://www.google.com"; // Redirect
+                }
+            };
+            setInterval(checkDevTools, 1000);
+        })();
+    </script>
     <link rel="icon" href="./index_files/logo-rspi.png" sizes="32x32">
     <link rel="icon" href="./index_files/logo-rspi.png" sizes="192x192">
     <link rel="apple-touch-icon" href="./index_files/logo-rspi.png">
